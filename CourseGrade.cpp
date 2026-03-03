@@ -71,7 +71,7 @@ void giveLetter(Student* students, int numStudents)
 			students[i].letterGrade = 'B';
 		else if (students[i].averageScore >= 70)
 			students[i].letterGrade = 'C';
-		else if (students[i].averageScore >= 64)
+		else if (students[i].averageScore >= 60)
 			students[i].letterGrade = 'D';
 		else
 			students[i].letterGrade = 'F';
