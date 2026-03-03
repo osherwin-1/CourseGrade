@@ -3,6 +3,7 @@
 using namespace std;
 #include <iostream>
 #include <fstream>
+#include <string>
 
 struct Student
 {
@@ -13,7 +14,7 @@ struct Student
 	char letterGrade;
 };
 
-void readData(Student*& students, int numStudents, int numTests)
+void readData(Student*& students, int& numStudents, int& numTests)
 {
 	
 	ifstream inFile("student_data.txt");
@@ -70,12 +71,14 @@ void giveLetter(Student* students, int numStudents)
 
 void printReportCard(const Student* students, int numStudents, int numTests)
 {
+	cout << "Course Report Card" << endl;
 	cout << "Name\tID\tAverage\tGrade" << endl;
+	cout << "-------------------------------" << endl;
 	for (int i = 0; i < numStudents; i++)
 	{
 		cout << students[i].name << "\t" << students[i].studentID << "\t" 
 			 << students[i].averageScore << "\t" << students[i].letterGrade << endl;
-		cout << "------------------------------------------" << endl;
+		cout << "-------------------------------" << endl;
 	}
 }
 
